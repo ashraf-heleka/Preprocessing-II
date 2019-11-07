@@ -1,1 +1,16 @@
 // Mixins in here
+.button-styl(@bkgrnd, @ftclr){
+    background: @bkgrnd;
+    color: @ftclr;
+    border: none;
+    text-align: center;
+    padding: 6% 0;
+    width: 80%;
+    font-size: 1.8rem;
+    text-decoration: none;
+    border-radius:1em;
+}
+
+.btn {
+    .button-styl(teal, white);
+}
