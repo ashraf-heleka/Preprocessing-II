@@ -4,19 +4,30 @@
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     
-
-   
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+      margin: 30px 5%;
+  }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+        padding: 0;
+    }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile {
+        width: 100%;
+        padding: 0;
+    }
 
       img {
         border-radius: 10px;
@@ -26,16 +37,28 @@
 
   .top-photo {
     margin-bottom: 2%;
+    @media @mobile {
+      width: 89%;
+      padding: 0;
+      margin: 0 5% 2% 5%;
+  }
   }
 
   .top-section {
     padding-bottom: 2%;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+  }
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    
 
     .text-content {
       padding-left: 1%;
@@ -45,12 +68,19 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile {
+        margin-bottom: 5%;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile {
+      width: 90%;
+      margin: 0 5% 30px 5%;
+    }
 
     img {
       border-radius: 10px;
@@ -62,10 +92,49 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 70%;
+        text-align: justify;
+      }
     }
   }
+  @media @mobile {
+  .top-section .text-content {
+    margin: 0 5%;
+  }
+}
+
+
+
 }// home
+
+
+ /* 
+   
+    @media @mobile {
+        
+        }    
+    }
+    Change font of p in top-section to be smaller
+    content section: flex-d to column
+        align-items: center;
+         justify-content: space-between;
+    align-items: center;
+
+    txt content: 100%
+    img content: 100%; flex and center
+
+   */
+
